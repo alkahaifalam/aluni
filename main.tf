@@ -5,7 +5,7 @@ provider "aws" {
 
 # Create a security group
 resource "aws_security_group" "allow_all" {
-  name        = "allow_all_sg1"
+  name        = "allow_all_sg2"
   description = "Security group with all inbound and outbound traffic allowed"
 
   # Allow all inbound traffic
