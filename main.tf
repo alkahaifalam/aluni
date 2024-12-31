@@ -33,7 +33,7 @@ resource "aws_instance" "my_instance" {
   # Associate the instance with the security group
   security_groups = [aws_security_group.allow_all.name]
 
-  key_name = aws_key_pair.uniza.key_name # Key pair for SSH access
+  key_name = aws_key_pair.kaif.key_name # Key pair for SSH access
 
   # To make the instance accessible via SSH (PuTTY requires .ppk format)
   tags = {
@@ -44,7 +44,7 @@ resource "aws_instance" "my_instance" {
 }
 
 # Create an SSH key pair
-resource "aws_key_pair" "uniza" {
+resource "aws_key_pair" "kaif" {
   key_name   = "my-ssh-key1"
   public_key = file("~/.ssh/id_rsa.pub")  # Ensure you have the key already generated
 }
